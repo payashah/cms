@@ -1,0 +1,37 @@
+.detailsModal {
+    padding: 3rem;
+    border-radius: .5rem;
+    background-color: var(--white);
+    width: 20rem;
+    position: relative;
+    font-size: 20px;
+}
+
+.detailsModal-closebtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+}
+
+.detailsModal-closebtn:hover {
+    cursor: pointer;
+    color: var(--hover);
+}
+
+.detailsModal-table {
+    width: 100%;
+}
+
+.detailsModal-table-tr {}
+
+.detailsModal-table-tr-th {
+    border-bottom: 1px solid var(--gray-dark);
+    padding-bottom: .5rem;
+    color: var(--hover);
+}
+
+.detailsModal-table-tr-td {
+    padding: 1rem 0;
+    color: var(--teal);
+}

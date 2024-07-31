@@ -1,0 +1,23 @@
+.products {
+    margin: .5rem;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    color: var(--white);
+    background-color: var(--black-dark);
+    font-size: 20px;
+
+}
+
+.products-table-tr-th {
+    padding: .5rem 0;
+    border-bottom: 1px solid var(--white);
+    color: var(--hover);
+
+}
+
+
+
+.products-table {
+    margin-top: .5rem;
+    width: 100%;
+}

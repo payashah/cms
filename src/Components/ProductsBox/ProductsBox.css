@@ -1,0 +1,33 @@
+.productsBox-table-tr {}
+
+.productsBox-table-tr-th {
+    padding: .5rem 0;
+    border-bottom: 1px solid var(--white);
+}
+
+.productsBox-table-tr-td {
+    padding: .5rem 0;
+    width: 20%;
+    color: var(--gray);
+
+}
+
+.productsBox-table-tr-td-btn {
+    margin-right: .5rem;
+    width: 6rem;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: .2rem;
+    background-color: var(--btn);
+}
+
+/* .productsBox-table-tr-td-btn.delete {
+    background-color: var(--red);
+} */
+
+.productsBox-table-tr-td-btn:hover {
+    cursor: pointer;
+    background-color: var(--hover);
+    color: var(--white);
+}

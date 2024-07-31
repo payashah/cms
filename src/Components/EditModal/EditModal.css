@@ -1,0 +1,57 @@
+.editModal {
+    padding: 3rem;
+    border-radius: .5rem;
+    background-color: var(--gray-dark);
+    border: 2px solid var(--hover);
+}
+
+.editModal-title {
+    font-size: 22px;
+    margin-bottom: 2rem;
+}
+
+.editModal-inputBox {
+    border-bottom: 1px solid var(--white);
+    display: flex;
+    align-items: end;
+
+}
+
+.editModal-inputBox-input {
+    width: 20rem;
+    font-size: 20px;
+    margin-top: 1.5rem;
+    border: none;
+    outline: none;
+    background-color: var(--gray-dark);
+    color: var(--white);
+}
+
+.editModal-inputBox-icon {
+    scale: 2;
+    padding: .5rem;
+    color: var(--btn);
+}
+
+.editModal-inputBox-icon:hover {
+    cursor: pointer;
+    color: var(--hover);
+}
+
+.editModal-btnBox {}
+
+.editModal-btnBox-btn {
+    margin-top: 2rem;
+    width: 100%;
+    font-size: 18px;
+    background-color: var(--btn);
+    border: none;
+    outline: none;
+    border-radius: .3rem;
+    padding: .3rem 0;
+}
+
+.editModal-btnBox-btn:hover {
+    cursor: pointer;
+    background-color: var(--hover);
+}

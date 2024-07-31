@@ -1,0 +1,52 @@
+.delete-modal-ctrl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+
+}
+
+.delete-modal {
+    text-align: center;
+    padding: 3rem;
+    background-color: var(--white);
+    border-radius: .5rem;
+}
+
+.delete-modal-title {
+    font-size: 22px;
+    margin-bottom: 2rem;
+}
+
+.delete-modal-btnBox {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.delete-modal-btnBox-btn {
+    width: 5rem;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    padding: .3rem;
+    border-radius: .3rem;
+
+}
+
+.delete-modal-btnBox-btn.accept {
+    background-color: var(--btn);
+}
+
+.delete-modal-btnBox-btn.accept:hover {
+    background-color: var(--hover);
+    cursor: pointer;
+}
+
+.delete-modal-btnBox-btn.reject {}
+
+.delete-modal-btnBox-btn.reject:hover {
+    background-color: var(--gray);
+    cursor: pointer;
+}
