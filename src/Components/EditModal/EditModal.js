@@ -1,10 +1,23 @@
 import React from 'react'
 import "./EditModal.css"
 import ReactDOM from "react-dom"
-import { FaCloudUploadAlt } from "react-icons/fa";
+import { useEffect } from 'react';
 
 
-export default function EditModal({ close, submit }) {
+export default function EditModal({ children, close, submit }) {
+
+    useEffect(() => {
+
+
+        const checkKey = (event) => {
+            if (event.keyCode !== this) {
+                close()
+            }
+        }
+        window.addEventListener("keydown", checkKey)
+
+        return () => window.removeEventListener("keydown", checkKey)
+    })
 
     return ReactDOM.createPortal(
         <div className='modals-parent active'>
@@ -12,30 +25,7 @@ export default function EditModal({ close, submit }) {
 
                 <h1 className='editModal-title'>اطلاعات جدید را وارد نمایید : </h1>
 
-                <div className='editModal-inputBox'>
-                    <input className='editModal-inputBox-input' type="text" placeholder='نام محصول ...' />
-                </div>
-
-                <div className='editModal-inputBox'>
-                    <input className='editModal-inputBox-input' type="text" placeholder='قیمت محصول ...' />
-                </div>
-
-                <div className='editModal-inputBox'>
-                    <input className='editModal-inputBox-input' type="text" placeholder='موجودی محصول ...' />
-                </div>
-
-                <div className='editModal-inputBox'>
-                    <input className='editModal-inputBox-input' type="text" placeholder='عکس محصول ...' />
-                    <FaCloudUploadAlt className='editModal-inputBox-icon'></FaCloudUploadAlt>
-                </div>
-
-                <div className='editModal-inputBox'>
-                    <input className='editModal-inputBox-input' type="text" placeholder='میزان محبوبیت محصول ...' />
-                </div>
-
-                <div className='editModal-inputBox'>
-                    <input className='editModal-inputBox-input' type="text" placeholder='میزان فروش محصول ...' />
-                </div>
+                {children}
 
                 <div className='editModal-btnBox'>
                     <button className='editModal-btnBox-btn' onClick={submit} > ثبت اطلاعات</button>

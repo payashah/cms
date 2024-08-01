@@ -14,7 +14,7 @@
 
 .productsBox-table-tr-td-btn {
     margin-right: .5rem;
-    width: 6rem;
+    width: 5rem;
     font-size: 18px;
     border: none;
     outline: none;
@@ -30,4 +30,32 @@
     cursor: pointer;
     background-color: var(--hover);
     color: var(--white);
+}
+
+.editModal-inputBox {
+    border-bottom: 1px solid var(--white);
+    display: flex;
+    align-items: end;
+
+}
+
+.editModal-inputBox-input {
+    width: 20rem;
+    font-size: 20px;
+    margin-top: 1.5rem;
+    border: none;
+    outline: none;
+    background-color: var(--gray-dark);
+    color: var(--white);
+}
+
+.editModal-inputBox-icon {
+    scale: 2;
+    padding: .5rem;
+    color: var(--btn);
+}
+
+.editModal-inputBox-icon:hover {
+    cursor: pointer;
+    color: var(--hover);
 }

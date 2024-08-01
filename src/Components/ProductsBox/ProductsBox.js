@@ -3,6 +3,8 @@ import "./ProductsBox.css"
 import DeleteModal from '../DeleteModal/DeleteModal'
 import DetailsModal from '../DetailsModal/DetailsModal'
 import EditModal from '../EditModal/EditModal'
+import { FaCloudUploadAlt } from "react-icons/fa";
+
 
 export default function ProductsBox() {
 
@@ -23,7 +25,9 @@ export default function ProductsBox() {
     const closeEditModal = () => {
         setIsShowEditModal(false)
     }
-    const submitEditModal = () => {
+    const submitEditModal = (event) => {
+        event.preventDefault()
+        console.log("ثبت شد");
         setIsShowEditModal(false)
 
     }
@@ -48,7 +52,35 @@ export default function ProductsBox() {
                 </tr>
             </tbody>
             {isShowDeleteModal && <DeleteModal accept={acceptDelete} reject={rejectDelete}></DeleteModal>}
-            {isShowEditModal && <EditModal close={closeEditModal} submit={submitEditModal}></EditModal>}
+            {isShowEditModal &&
+                <EditModal close={closeEditModal} submit={submitEditModal}>
+
+                    <div className='editModal-inputBox'>
+                        <input className='editModal-inputBox-input' type="text" placeholder='نام محصول ...' />
+                    </div>
+
+                    <div className='editModal-inputBox'>
+                        <input className='editModal-inputBox-input' type="text" placeholder='قیمت محصول ...' />
+                    </div>
+
+                    <div className='editModal-inputBox'>
+                        <input className='editModal-inputBox-input' type="text" placeholder='موجودی محصول ...' />
+                    </div>
+
+                    <div className='editModal-inputBox'>
+                        <input className='editModal-inputBox-input' type="text" placeholder='عکس محصول ...' />
+                        <FaCloudUploadAlt className='editModal-inputBox-icon'></FaCloudUploadAlt>
+                    </div>
+
+                    <div className='editModal-inputBox'>
+                        <input className='editModal-inputBox-input' type="text" placeholder='میزان محبوبیت محصول ...' />
+                    </div>
+
+                    <div className='editModal-inputBox'>
+                        <input className='editModal-inputBox-input' type="text" placeholder='میزان فروش محصول ...' />
+                    </div>
+
+                </EditModal>}
             {isShowDetailsModal && <DetailsModal close={closeDetailsModal}></DetailsModal>}
 
         </>

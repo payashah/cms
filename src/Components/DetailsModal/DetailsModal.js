@@ -1,10 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./DetailsModal.css"
 import ReactDOM from "react-dom"
 import { GrClose } from "react-icons/gr";
 
 
 export default function DetailsModal({ close }) {
+
+    useEffect(() => {
+
+
+        const checkKey = (event) => {
+            if (event.keyCode !== this) {
+                close()
+            }
+        }
+        window.addEventListener("keydown", checkKey)
+
+        return () => window.removeEventListener("keydown", checkKey)
+    })
+
     return ReactDOM.createPortal(
         <div className='modals-parent active'>
             <div className='detailsModal '>
